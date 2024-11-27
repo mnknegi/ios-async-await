@@ -7,18 +7,28 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		852CE97E2CF7773500A84B9E /* UserRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 852CE97D2CF7773500A84B9E /* UserRowView.swift */; };
 		85636DB52CCCBB5300D91579 /* AsyncAwaitApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85636DB42CCCBB5300D91579 /* AsyncAwaitApp.swift */; };
-		85636DB72CCCBB5300D91579 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85636DB62CCCBB5300D91579 /* ContentView.swift */; };
+		85636DB72CCCBB5300D91579 /* UserListScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85636DB62CCCBB5300D91579 /* UserListScreen.swift */; };
 		85636DB92CCCBB5500D91579 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 85636DB82CCCBB5500D91579 /* Assets.xcassets */; };
 		85636DBC2CCCBB5500D91579 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 85636DBB2CCCBB5500D91579 /* Preview Assets.xcassets */; };
+		85636DC32CCCC19900D91579 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85636DC22CCCC19800D91579 /* User.swift */; };
+		85636DC52CCCC26600D91579 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85636DC42CCCC26600D91579 /* Service.swift */; };
+		85636DC72CCCC60500D91579 /* UserListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85636DC62CCCC60500D91579 /* UserListViewModel.swift */; };
+		85E79D272CF774A600AC4BDD /* UserDetailScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85E79D262CF774A600AC4BDD /* UserDetailScreen.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		852CE97D2CF7773500A84B9E /* UserRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRowView.swift; sourceTree = "<group>"; };
 		85636DB12CCCBB5300D91579 /* AsyncAwait.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AsyncAwait.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		85636DB42CCCBB5300D91579 /* AsyncAwaitApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncAwaitApp.swift; sourceTree = "<group>"; };
-		85636DB62CCCBB5300D91579 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		85636DB62CCCBB5300D91579 /* UserListScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListScreen.swift; sourceTree = "<group>"; };
 		85636DB82CCCBB5500D91579 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		85636DBB2CCCBB5500D91579 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		85636DC22CCCC19800D91579 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		85636DC42CCCC26600D91579 /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
+		85636DC62CCCC60500D91579 /* UserListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListViewModel.swift; sourceTree = "<group>"; };
+		85E79D262CF774A600AC4BDD /* UserDetailScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailScreen.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +42,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		852CE97C2CF7772500A84B9E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				852CE97D2CF7773500A84B9E /* UserRowView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		85636DA82CCCBB5300D91579 = {
 			isa = PBXGroup;
 			children = (
@@ -52,7 +70,11 @@
 			isa = PBXGroup;
 			children = (
 				85636DB42CCCBB5300D91579 /* AsyncAwaitApp.swift */,
-				85636DB62CCCBB5300D91579 /* ContentView.swift */,
+				852CE97C2CF7772500A84B9E /* Views */,
+				85E79D282CF7756C00AC4BDD /* Model */,
+				85E79D232CF7747500AC4BDD /* UserList */,
+				85E79D252CF7749100AC4BDD /* UserDetails */,
+				85E79D242CF7748000AC4BDD /* Service */,
 				85636DB82CCCBB5500D91579 /* Assets.xcassets */,
 				85636DBA2CCCBB5500D91579 /* Preview Content */,
 			);
@@ -65,6 +87,39 @@
 				85636DBB2CCCBB5500D91579 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		85E79D232CF7747500AC4BDD /* UserList */ = {
+			isa = PBXGroup;
+			children = (
+				85636DB62CCCBB5300D91579 /* UserListScreen.swift */,
+				85636DC62CCCC60500D91579 /* UserListViewModel.swift */,
+			);
+			path = UserList;
+			sourceTree = "<group>";
+		};
+		85E79D242CF7748000AC4BDD /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				85636DC42CCCC26600D91579 /* Service.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		85E79D252CF7749100AC4BDD /* UserDetails */ = {
+			isa = PBXGroup;
+			children = (
+				85E79D262CF774A600AC4BDD /* UserDetailScreen.swift */,
+			);
+			path = UserDetails;
+			sourceTree = "<group>";
+		};
+		85E79D282CF7756C00AC4BDD /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				85636DC22CCCC19800D91579 /* User.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,8 +192,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				85636DB72CCCBB5300D91579 /* ContentView.swift in Sources */,
+				852CE97E2CF7773500A84B9E /* UserRowView.swift in Sources */,
+				85636DB72CCCBB5300D91579 /* UserListScreen.swift in Sources */,
+				85E79D272CF774A600AC4BDD /* UserDetailScreen.swift in Sources */,
 				85636DB52CCCBB5300D91579 /* AsyncAwaitApp.swift in Sources */,
+				85636DC32CCCC19900D91579 /* User.swift in Sources */,
+				85636DC52CCCC26600D91579 /* Service.swift in Sources */,
+				85636DC72CCCC60500D91579 /* UserListViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

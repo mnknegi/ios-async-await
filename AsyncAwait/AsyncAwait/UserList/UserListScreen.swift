@@ -14,25 +14,7 @@ struct UserListScreen: View {
     var body: some View {
         NavigationStack {
             List(self.viewModel.users, id: \.id) { user in
-                HStack {
-                    AsyncImage(url: URL(string: user.image)) { image in
-                        image
-                            .resizable()
-                            .frame(width: 60, height: 60)
-                            .aspectRatio(contentMode: .fit)
-                    } placeholder: {
-                        ProgressView()
-                    }
-
-                    VStack(alignment: .leading) {
-                        Text(user.name)
-                            .font(.title3)
-
-                        Text(user.email)
-                            .font(.footnote)
-                            .foregroundStyle(.secondary)
-                    }
-                }
+                UserRowView(user: user)
             }
             .task {
                 await self.viewModel.fetchAllUsers()

@@ -9,7 +9,19 @@ import SwiftUI
 
 struct UserDetailScreen: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+            Image(systemName: "person.fill")
+                .resizable()
+                .frame(width: 200, height: 200)
+
+            VStack {
+                Text("abc xyz")
+                Text("abc@gmail.com")
+            }
+            .font(.title2)
+            .fontWeight(.medium)
+            .padding()
+        }
     }
 }
 
